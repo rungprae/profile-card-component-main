@@ -2,18 +2,24 @@
   box-sizing: border-box;
 }
 html,
-body {
-  max-width: 100vw;
-  overflow: hidden;
-}
-body {
+body,
+.bg {
   margin: 0;
   min-height: 100vh;
-  padding: 147px 24px 145px;
-  text-align: center;
+  max-width: 100vw;
   background-size: 100%;
+  overflow: hidden;
+  position: relative;
+}
+  
+body{
   background: hsl(185, 75%, 39%);
-  font-family: "Kumbh Sans";
+}
+.bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 .bg:after {
   content: "";
@@ -21,14 +27,14 @@ body {
   background-image: url(./images/bg-pattern-bottom.svg);
   width: 210px;
   height: 292px;
-  background-size: 250%;
+  background-size: cover;
   transform: rotate(-360deg);
   transform-origin: center;
   position: absolute;
-  bottom: 0px;
-  right: 0;
+  bottom: -30px;
+  right: -20px;
   z-index: -2;
-  opacity: 0.7;
+  opacity: 1;
 }
 .bg:before {
   content: "";
@@ -36,23 +42,22 @@ body {
   background-image: url(./images/bg-pattern-bottom.svg);
   width: 210px;
   height: 292px;
-  background-size: 250%;
+  background-size: cover;
   transform: rotate(180deg);
   transform-origin: center;
   position: absolute;
-  top: -25px;
-  left: 0px;
+  top: -80px;
+  left: -20px;
   z-index: -2;
-  opacity: 0.5;
+  opacity: 1;
 }
 .card {
-  margin-left: auto;
-  margin-right: auto;
   background-color: #ffffff;
   border-radius: 20px;
   width: 327px;
   height: 377px;
   max-width: 375px;
+  font-family: "Kumbh Sans";
 }
 /* section1 */
 .section1 {
@@ -86,12 +91,14 @@ body {
   font-weight: 700;
   color: hsl(229, 23%, 23%);
   letter-spacing: 1.5px;
+  
 }
 .city {
   font-size: 14px;
   font-weight: 400;
   color: hsl(227, 10%, 46%);
   letter-spacing: 0.5px;
+  text-align: center;
 }
 /* section2 */
 .section2 {
@@ -112,4 +119,37 @@ body {
   font-weight: 400;
   color: hsl(227, 10%, 46%);
   letter-spacing: 1px;
+}
+/* desktop 1440px */
+@media (min-width: 1440px) {
+  .card {
+    width: 352px;
+    height: 376px;
+  }
+  .bg:before {
+    content: "";
+    display: block;
+    background-image: url(./images/bg-pattern-bottom.svg);
+    width: 1080px;
+    height: 516px;
+    background-size: 100%;
+    position: absolute;
+    top: -50px;
+    left: -360px;
+    z-index: -2;
+    opacity: 0.7;
+  }
+  .bg:after {
+    content: "";
+    display: block;
+    background-image: url(./images/bg-pattern-bottom.svg);
+    width: 1080px;
+    height: 516px;
+    background-size: 100%;
+    position: absolute;
+    bottom: -120px;
+    right: -200px;
+    z-index: -2;
+    opacity: 0.7;
+  }
 }
