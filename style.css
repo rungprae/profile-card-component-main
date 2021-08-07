@@ -11,15 +11,14 @@ body,
   overflow: hidden;
   position: relative;
 }
-  
-body{
-  background: hsl(185, 75%, 39%);
+
+body {
+  background: #18a2ad;
 }
-.bg{
+.bg {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .bg:after {
   content: "";
@@ -27,14 +26,14 @@ body{
   background-image: url(./images/bg-pattern-bottom.svg);
   width: 210px;
   height: 292px;
-  background-size: cover;
+  background-size: 200%;
   transform: rotate(-360deg);
   transform-origin: center;
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   right: -20px;
   z-index: -2;
-  opacity: 1;
+  opacity: 0.8;
 }
 .bg:before {
   content: "";
@@ -42,14 +41,14 @@ body{
   background-image: url(./images/bg-pattern-bottom.svg);
   width: 210px;
   height: 292px;
-  background-size: cover;
-  transform: rotate(180deg);
+  background-size: 200%;
+  transform: rotate(185deg);
   transform-origin: center;
   position: absolute;
-  top: -80px;
+  top: -60px;
   left: -20px;
   z-index: -2;
-  opacity: 1;
+  opacity: 0.6;
 }
 .card {
   background-color: #ffffff;
@@ -71,6 +70,8 @@ body{
   height: 140px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  background-color: #3dcad1;
+  background-blend-mode: overlay;
 }
 .im-victor {
   position: absolute;
@@ -91,7 +92,6 @@ body{
   font-weight: 700;
   color: hsl(229, 23%, 23%);
   letter-spacing: 1.5px;
-  
 }
 .city {
   font-size: 14px;
